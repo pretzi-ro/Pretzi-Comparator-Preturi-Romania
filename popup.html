@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pretzi OSS</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="hero-brand">
+        <img src="icons/icon32.png" alt="" width="32" height="32" />
+        <div>
+          <p class="eyebrow">Pretzi OSS</p>
+          <h1>Extractor local</h1>
+        </div>
+      </div>
+      <span class="badge">No backend</span>
+    </header>
+
+    <section class="card status-card">
+      <p class="status-label" id="status-label">Pregatim scanarea...</p>
+      <p class="status-text" id="status-text">Extensia verifica tabul activ doar cand deschizi popup-ul.</p>
+    </section>
+
+    <section class="card hidden" id="summary-card">
+      <div class="summary">
+        <img class="product-image hidden" id="product-image" alt="" />
+        <div class="summary-body">
+          <p class="store" id="store-name"></p>
+          <h2 id="product-title">Produs</h2>
+          <p class="url" id="product-url"></p>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-label">Pret curent</span>
+          <strong id="metric-price">-</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Pret vechi</span>
+          <strong id="metric-original-price">-</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Stoc</span>
+          <strong id="metric-stock">-</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Metoda</span>
+          <strong id="metric-method">-</strong>
+        </div>
+      </div>
+
+      <dl class="facts" id="facts-list"></dl>
+
+      <details class="json-card">
+        <summary>Vezi JSON extras</summary>
+        <pre id="json-output"></pre>
+      </details>
+    </section>
+
+    <section class="card hidden" id="listing-card">
+      <h2>Pagina suportata, dar nu pare produs</h2>
+      <p id="listing-text"></p>
+    </section>
+
+    <section class="actions">
+      <button class="button button-primary" id="rescan-button" type="button">Rescaneaza</button>
+      <button class="button button-secondary" id="copy-button" type="button">Copiaza JSON</button>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
